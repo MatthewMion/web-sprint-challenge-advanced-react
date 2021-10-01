@@ -40,13 +40,13 @@ Display a list of the plants from the server. This should be done in the class c
 
 The form is working, but it is currently controlled by local stateful logic. We want to control this form with a custom hook.
 
-- [ ] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic.
-- [ ] You built a useForm hook in the guided project this week. You will probably need to use that as a guide to complete this step. However, try and build it out first before you peek at the guided project. And _do not_ copy/paste directly from the guided project!\_
+- [x] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic.
+- [x] You built a useForm hook in the guided project this week. You will probably need to use that as a guide to complete this step. However, try and build it out first before you peek at the guided project. And _do not_ copy/paste directly from the guided project!\_
 
 ### Test the Checkout Form
 
-- [ ] Run the test runner and ensure that `src/components/CheckoutForm.test.js` is correctly called.
-- [ ] Fill out code necessary to test that that Checkout form renders without errors.
+- [x] Run the test runner and ensure that `src/components/CheckoutForm.test.js` is correctly called.
+- [x] Fill out code necessary to test that that Checkout form renders without errors.
 - [ ] Fill out code necessary to test that when all form inputs are filled with valid data, a success message appears.
 - [ ] Make sure the tests are passing, and make sure you can cause the tests to fail purposefully, so that you know the tests are truly working.
 
@@ -92,9 +92,14 @@ The form is working, but it is currently controlled by local stateful logic. We 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers to the questions within `interview_answers.md` file. These will not be counted as a part of your sprint score but will be helpful for preparing you for your endorsement interview, and enhancing overall understanding.
 
 1. What are the main differences between a stateful and a functional component?
+   -The main differences are that functional components do not have access to the lifecycle methods and refs that class components do. Also class components were traditionally the only ones able to use state, however now functional components can as well.
 
 2. When does a componentWillMount function be called? What about a componentWillUpdate?
-
+   -componentWillMount triggers before the initial render
+   -componentWillUpdate triggers immediately before rendering when new props or state are being received
 3. Define stateful logic.
-
+   -A behavior created with the use of one or more hooks that use state which you use that behavior to change state.
 4. What are the three step of creating a successful test? What is done in each phase?
+   -Arrange = assign variable, render the app, input and targets, set up data to be tested essentially
+   -Act = act on the unit under test, usually by calling methods or functions on the element
+   -Assert = verify that the expected results are as they should be
